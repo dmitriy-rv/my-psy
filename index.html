@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Аваллон - психологические занятия онлайн</title>
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+	<link rel="stylesheet" href="style/slick.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div class="can">
+		<div class="card">
+			<div class="img">
+				
+			</div>
+			<div class="text">
+				<div class="close">x</div>
+				<div class="title">
+					Заголовок прям 1
+				</div>
+				<div class="info">
+					dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+				</div>
+			</div>
+			<div class="more">
+				Подробнее
+			</div>
+		</div>		
+
+		<div class="card">
+			<div class="img">
+				
+			</div>
+			<div class="text">
+				<div class="close">x</div>
+				<div class="title">
+					Заголовок прям 2
+				</div>
+				<div class="info">
+					dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+				</div>
+			</div>
+			<div class="more">
+				Подробнее
+			</div>
+		</div>		
+
+		<div class="card">
+			<div class="img">
+				
+			</div>
+			<div class="text">
+				<div class="close">x</div>
+				<div class="title">
+					Заголовок прям 3
+				</div>
+				<div class="info">
+					dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+				</div>
+			</div>
+			<div class="more">
+				Подробнее
+			</div>
+		</div>		
+		<div class="card">
+			<div class="img">
+				
+			</div>
+			<div class="text">
+				<div class="close">x</div>
+				<div class="title">
+					Заголовок прям 3
+				</div>
+				<div class="info">
+					dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+				</div>
+			</div>
+			<div class="more">
+				Подробнее
+			</div>
+		</div>		
+		<div class="card">
+			<div class="img">
+				
+			</div>
+			<div class="text">
+				<div class="close">x</div>
+				<div class="title">
+					Заголовок прям 3
+				</div>
+				<div class="info">
+					dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+				</div>
+			</div>
+			<div class="more">
+				Подробнее
+			</div>
+		</div>		
+		<div class="card">
+			<div class="img">
+				
+			</div>
+			<div class="text">
+				<div class="close">x</div>
+				<div class="title">
+					Заголовок прям 3
+				</div>
+				<div class="info">
+					dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+				</div>
+			</div>
+			<div class="more">
+				Подробнее
+			</div>
+		</div>		
+	</div>	
+
+	<div class="list">
+		<div class="title">
+			Заголовок 1
+		</div>
+		<div class="item">
+			<div class="head">
+				Sdfvsdfvsdf
+			</div>
+			<img class="" src="img/down-arrow.svg" alt="">
+			<div class="text">
+				dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+			</div>
+		</div>
+		<div class="item">
+			<div class="head">
+				Sdfvsdfvsdf
+			</div>
+			<img class="" src="img/down-arrow.svg" alt="">
+			<div class="text">
+				dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+			</div>
+		</div>
+		<div class="item">
+			<div class="head">
+				Sdfvsdfvsdf
+			</div>
+			<img class="" src="img/down-arrow.svg" alt="">
+			<div class="text">
+				dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+			</div>
+		</div>
+	</div>
+
+	<div class="afraid">
+		<div class="item">
+			<div class="img">
+				
+			</div>
+		</div>
+		<div class="item">
+			<div class="img">
+				
+			</div>
+		</div>
+		<div class="item">
+			<div class="img">
+				
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/script.js"></script>
+
+	<script>
+		$('.more').click(function(event){
+			$(event.target.offsetParent).addClass('show_more');
+		});
+
+		$('.close').click(function(event){
+			console.log(event);
+			$(event.target.parentElement.offsetParent).removeClass('show_more');
+		});
+
+		$('.afraid .item').click(function(event){
+			$('.afraid .item').toggleClass('show_more');
+		});
+
+		$('.list .item').click(function(event){
+			$(event.target.parentElement).toggleClass('show_more');
+		});
+
+		$('.can').slick({
+			centerMode: true,
+  			centerPadding: '60px',
+		  	infinite: false,
+		  	slidesToShow: 1,
+		  	slidesToScroll: 1,
+		  	variableWidth: true
+		});
+	</script>
+
+</body>
+</html>
