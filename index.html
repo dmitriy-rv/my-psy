@@ -169,7 +169,7 @@
 			</div>
 			<img class="" src="img/down-arrow.svg" alt="">
 			<div class="text">
-				dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+				
 			</div>
 		</div>
 	</div>
@@ -179,18 +179,44 @@
 			Контактная информация
 		</div>
 		<div class="item">
-			<div class="img">
-				
+			<div class="preview">
+				<img class="img" src="img/calendar.svg" alt="">
+				<div class="title_hide">
+					Заголовок прям fdg bdfgbd fgbdfgb dfgb
+				</div>
+				<div class="more">
+					подробнее
+				</div>
+			</div>
+			<div class="text_show">
+				<div class="title_show">
+					Заголовок прям fdg bdfgbd fgbdfgb dfgb
+				</div>
+				<div class="text">
+					dv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdfv sdf vsdv sdfv sdfv sd sdfv s
+				</div>
 			</div>
 		</div>
 		<div class="item">
-			<div class="img">
-				
+						<div class="preview">
+				<img class="img" src="img/calendar.svg" alt="">
+				<div class="title_hide">
+					Заголовок прям
+				</div>
+				<div class="more">
+					подробнее
+				</div>
 			</div>
 		</div>
 		<div class="item">
-			<div class="img">
-				
+			<div class="preview">
+				<img class="img" src="img/calendar.svg" alt="">
+				<div class="title_hide">
+					Заголовок прям
+				</div>
+				<div class="more">
+					подробнее
+				</div>
 			</div>
 		</div>
 	</div>
@@ -297,8 +323,8 @@
 			$(event.target.parentElement.offsetParent).removeClass('show_more');
 		});
 
-		$('.afraid .item').click(function(event){
-			$('.afraid .item').toggleClass('show_more');
+		$('.afraid .item .preview').click(function(event){
+			$(event.target.parentElement).toggleClass('show_more');
 		});
 
 		$('.list .item').click(function(event){
@@ -311,7 +337,9 @@
 		  	infinite: false,
 		  	slidesToShow: 1,
 		  	slidesToScroll: 1,
-		  	variableWidth: true
+		  	variableWidth: true,
+		  	dots: true,
+		  	arrows: false
 		});
 	</script>
 
