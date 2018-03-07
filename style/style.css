@@ -25,7 +25,7 @@
 	height: 100vh;
 	overflow: hidden;
 	position: relative;
-	background-image: url(../img/front-mob-sm.jpg);
+	background-image: url(../img/block-7.jpg);
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
@@ -198,6 +198,22 @@
   color:#ff5722;
 }
 
+@media (min-width: 1024px) {
+  .warm{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+  .warm .warm_foto{
+    width: 50%;
+  }  
+  .warm .warm_text{
+    width: 50%;
+  }
+}
+
 .can{
 	background-image: url(../img/block-7.jpg);
   padding-bottom: 10px;
@@ -301,6 +317,22 @@
   background-color: blue;
 }
 
+.can .can-desctop{
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .can .can-desctop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .can .can-wrap{
+    display: none;
+  }
+}
+
 .list{
 	margin-top:50px; 
 }
@@ -352,6 +384,27 @@
 	opacity: 1;
 }
 
+@media (min-width: 1024px) {
+  .list .list_wrap{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .list .item{
+    height: auto;
+    border-bottom: 0px;
+    margin: 0;
+  }
+
+  .list .item img{
+    display: none;
+  }
+
+  .list .item .text{
+    opacity: 1;
+  }
+}
+
 .metod{
 	background-image: url(../img/block-7.jpg);
 	-webkit-background-size: 100%;
@@ -370,6 +423,13 @@
     padding-right: 10px;
     padding-bottom: 20px;
     padding-top: 1px;
+}
+
+@media (min-width: 1024px) {
+  .metod .content{
+    width: 50%;
+    margin: 0;
+  }
 }
 
 .afraid{
@@ -432,6 +492,37 @@
 
 .afraid .item.show_more .text_show{
 	opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .afraid_wrap{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+
+  .afraid .afraid_wrap .item{
+    height: auto;
+  }
+
+  .afraid .afraid_wrap .item img{
+    transform: translateX(100px) scale(1.2);
+  }
+
+  .afraid .afraid_wrap .item .title_hide{
+    display: none;
+  }
+
+  .afraid .afraid_wrap .item .more{
+    display: none;
+  }
+
+  .afraid .afraid_wrap .item .text_show{
+    opacity: 1;
+  }
+
 }
 
 .how{
@@ -506,6 +597,25 @@
 .how .button:active{
   background-color: #fff;
   color:#ff5722;
+}
+
+@media (min-width: 1024px) {
+  .how .item_block{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+
+  .how .item_block .wrap{
+    text-align: center;
+  }
+
+  .how .button{
+    width: 220px;
+    margin: auto;
+  }
 }
 
 .interaction{
@@ -654,6 +764,26 @@
   transform: translate3d(-66.6%, 0, 0);
 }
 
+@media (min-width: 1024px) {
+  .interaction{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+  .interaction .price,
+  .interaction .form{
+    width: 50%;
+    text-align: center;
+  }
+
+  .interaction .form .button{
+    width: 200px;
+    margin: auto;
+  }
+}
+
 .contacts{
 	background-image: url(../img/block-7.jpg);
 	-webkit-background-size: 100%;
@@ -705,4 +835,10 @@
 
 .contacts .content li .show-popup-offer{
   text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+  .contacts .content{
+    width: 50%;
+  }
 }
