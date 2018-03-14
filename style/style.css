@@ -9,7 +9,10 @@
   text-align: center;
   font-size: 32px;
   margin-bottom: 64px;
-  font-weight: bold; }
+  color: #000; }
+
+.second_line {
+  margin-bottom: 0 !important; }
 
 .front {
   display: -webkit-flex;
@@ -145,7 +148,8 @@
       font-size: 25px;
       line-height: 32px;
       margin-bottom: 32px;
-      font-family: 'Noto Sans', sans-serif; }
+      font-family: 'Noto Sans', sans-serif;
+      color: #000; }
   .warm .button_wrap {
     display: flex; }
   @media (min-width: 1024px) {
@@ -160,7 +164,8 @@
         width: 650px; }
         .warm .warm_text span {
           font-size: 18px;
-          line-height: 1.8; }
+          line-height: 1.8;
+          color: rgba(0, 0, 0, 0.7); }
         .warm .warm_text .button_wrap {
           margin-top: 50px;
           width: 450px;
@@ -257,7 +262,7 @@
         width: 650px;
         height: auto;
         margin: 0;
-        margin-bottom: 100px;
+        margin-bottom: 64px;
         box-shadow: none;
         display: flex;
         border-radius: 0; }
@@ -277,12 +282,14 @@
             line-height: 32px;
             margin-bottom: 32px;
             font-family: 'Noto Sans', sans-serif;
+            color: #000;
             font-weight: normal;
             margin-top: 0px;
             text-align: left; }
           .can .can-desctop .card .text .info {
             font-size: 18px;
             line-height: 1.8;
+            color: rgba(0, 0, 0, 0.7);
             opacity: 1;
             margin-top: 0;
             transform: none; }
@@ -344,10 +351,12 @@
         font-size: 25px;
         line-height: 32px;
         margin-bottom: 32px;
-        font-family: 'Noto Sans', sans-serif; }
+        font-family: 'Noto Sans', sans-serif;
+        color: #000; }
       .list .item .text {
         font-size: 18px;
         line-height: 1.8;
+        color: rgba(0, 0, 0, 0.7);
         opacity: 1; } }
 
 .metod {
@@ -360,6 +369,7 @@
   .metod .content {
     font-size: 18px;
     line-height: 1.8;
+    color: rgba(0, 0, 0, 0.7);
     margin: auto; }
   @media (min-width: 1024px) {
     .metod {
@@ -409,6 +419,7 @@
     .afraid .item .text_show {
       font-size: 18px;
       line-height: 1.8;
+      color: rgba(0, 0, 0, 0.7);
       opacity: 0;
       transition: 0.2s; }
     .afraid .item.show_more {
@@ -453,6 +464,7 @@
           line-height: 32px;
           margin-bottom: 32px;
           font-family: 'Noto Sans', sans-serif;
+          color: #000;
           text-align: center; } }
 
 .how {

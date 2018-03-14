@@ -46,6 +46,7 @@
 @mixin text {
   font-size: 18px;
   line-height: 1.8;
+  color:rgba(0,0,0,0.7);
 }
 
 @mixin subtitle {
@@ -53,6 +54,7 @@
   line-height: 32px;
   margin-bottom: 32px;
   font-family: 'Noto Sans', sans-serif;
+  color:#000;
 }
 
 *{
@@ -67,7 +69,11 @@
   text-align: center;
   font-size: 32px;
   margin-bottom: 64px;
-  font-weight: bold;
+  color:#000;
+}
+
+.second_line{
+  margin-bottom: 0 !important;
 }
 
 .front{
@@ -349,7 +355,7 @@
         width: 650px;
         height: auto;
         margin: 0;
-        margin-bottom: 100px;
+        margin-bottom: 64px;
         box-shadow: none;
         display: flex;
         border-radius: 0;
