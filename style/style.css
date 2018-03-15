@@ -15,10 +15,10 @@
   margin-bottom: 0 !important; }
 
 .front {
-  background-image: url(../img/bg.jpeg);
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-image: url(../img/front_my.jpg);
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -29,37 +29,31 @@
   overflow: hidden;
   position: relative; }
   .front .wrap {
-    width: 1320px;
+    width: 100%;
     max-width: 1320px;
     margin: auto; }
     @media (min-width: 1024px) {
       .front .wrap {
         padding-top: 48px;
         padding-bottom: 48px; } }
+  .front .title-block {
+    width: 50%;
+    float: right; }
   .front .title {
-    position: absolute;
     text-align: center;
-    font-size: 30px;
-    bottom: 230px;
-    left: 0px;
+    font-size: 44px;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
     font-family: 'Noto Sans', sans-serif;
-    color: #fff;
-    text-shadow: 0px 1px 6px #000;
+    color: #333;
+    text-shadow: 0px 1px 6px #fff;
     will-change: transform; }
   .front .subtitle {
-    position: absolute;
     text-align: center;
-    font-size: 20px;
-    bottom: 160px;
-    left: 0px;
+    font-size: 26px;
+    margin-bottom: 48px;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #fff;
-    text-shadow: 0px 1px 6px #000;
+    color: #000;
+    text-shadow: 0px 1px 6px #fff;
     will-change: transform; }
   .front .button-wrap {
     transition: 200ms;
@@ -67,16 +61,13 @@
     height: 50px;
     margin-left: 40px;
     margin-right: 40px;
-    position: absolute;
-    bottom: 70px;
-    left: 0;
-    right: 0;
-    will-change: transform; }
+    will-change: transform;
+    text-align: center; }
   .front .button {
     display: inline-block;
     text-decoration: none;
     border: 1px solid #ff5722;
-    border-radius: 5px;
+    border-radius: 3px;
     text-align: center;
     line-height: 50px;
     text-transform: uppercase;
@@ -84,12 +75,12 @@
     letter-spacing: 3px;
     background-color: #ff5722;
     color: #fff;
-    box-shadow: 0px 4px 4px 0px #00000088;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     transition: 200ms;
-    width: 100%; }
+    width: 300px; }
 
 .warm {
-  width: 1320px;
+  width: 100%;
   max-width: 1320px;
   margin: auto;
   overflow: hidden;
@@ -187,12 +178,12 @@
             width: 200px; } }
 
 .can {
-  background-image: url(../img/bg.jpeg);
   background-size: 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-image: url(../img/bad.jpg); }
   .can .content {
-    width: 1320px;
+    width: 100%;
     max-width: 1320px;
     margin: auto; }
     @media (min-width: 1024px) {
@@ -292,7 +283,7 @@
             width: 100%;
             height: 100%; }
         .can .can-desctop .card .text {
-          width: 430px;
+          width: 420px;
           transform: none;
           position: relative;
           padding: 24px; }
@@ -316,7 +307,7 @@
       display: none; } }
 
 .list {
-  width: 1320px;
+  width: 100%;
   max-width: 1320px;
   margin: auto; }
   @media (min-width: 1024px) {
@@ -380,10 +371,10 @@
         opacity: 1; } }
 
 .metod {
-  background-image: url(../img/bg.jpeg);
   background-size: 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-image: url(../img/metod.jpg); }
   .metod .button {
     font-family: 'Noto Sans', sans-serif;
     display: block;
@@ -416,7 +407,7 @@
     margin: auto;
     margin-top: 24px; }
   .metod .wrap {
-    width: 1320px;
+    width: 100%;
     max-width: 1320px;
     margin: auto; }
     @media (min-width: 1024px) {
@@ -438,10 +429,16 @@
       .metod .content {
         width: 620px;
         margin: 0;
-        padding: 48px; } }
+        padding: 48px; }
+        .metod .content ul {
+          padding-left: 18px;
+          padding-top: 10px;
+          padding-bottom: 10px; }
+          .metod .content ul li {
+            padding-bottom: 8px; } }
 
 .afraid {
-  width: 1320px;
+  width: 100%;
   max-width: 1320px;
   margin: auto; }
   @media (min-width: 1024px) {
@@ -525,18 +522,21 @@
           text-align: center; } }
 
 .how {
-  background-image: url(../img/bg.jpeg);
   background-size: 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-image: url(../img/how.jpg); }
   .how .content {
-    width: 1320px;
+    width: 100%;
     max-width: 1320px;
     margin: auto; }
     @media (min-width: 1024px) {
       .how .content {
         padding-top: 48px;
         padding-bottom: 48px; } }
+  .how .title {
+    color: #fff;
+    text-shadow: 0px 1px 6px #000; }
   .how .wrap {
     width: 100%; }
     .how .wrap.left {
@@ -549,8 +549,10 @@
     width: 160px;
     text-align: center;
     display: inline-block;
-    text-shadow: 0px 1px 1px #fff img;
-      text-shadow-width: 100px; }
+    color: #fff;
+    text-shadow: 0px 1px 3px #000; }
+    .how .item img {
+      width: 100px; }
   @media (min-width: 1024px) {
     .how .item_block {
       display: -webkit-flex;
@@ -567,7 +569,7 @@
       margin: auto; } }
 
 .interaction {
-  width: 1320px;
+  width: 100%;
   max-width: 1320px;
   margin: auto; }
   @media (min-width: 1024px) {
@@ -601,12 +603,22 @@
     .interaction .button:hover, .interaction .button:active {
       background-color: #fff;
       color: #ff5722; }
+  .interaction .input-wrap {
+    margin-top: -32px;
+    margin-bottom: 48px; }
+  .interaction .wrap_form_sucsess {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    font-family: 'Noto Sans', sans-serif;
+    color: rgba(0, 0, 0, 0.9);
+    display: none; }
   .interaction .input {
     position: relative;
     z-index: 1;
     display: inline-block;
     margin: 1em;
-    max-width: 350px;
+    max-width: 80%;
     width: calc(100% - 2em);
     vertical-align: top; }
   .interaction .input__field {
@@ -620,7 +632,6 @@
     background: #f0f0f0;
     color: #aaa;
     font-weight: 400;
-    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-appearance: none;
     /* for box shadows to show on iOS */ }
   .interaction .input__field:focus {
@@ -630,9 +641,8 @@
     float: right;
     padding: 0 1em;
     width: 40%;
-    color: #696969;
-    font-weight: bold;
-    font-size: 70.25%;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-touch-callout: none;
@@ -658,12 +668,12 @@
     padding: 5px 0px 10px;
     width: 100%;
     background: transparent;
-    color: #9da8b2;
-    font-size: 20px; }
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 24px; }
   .interaction .input__label--nao {
     position: absolute;
     top: 0px;
-    font-size: 14px;
+    font-size: 16px;
     left: 0;
     display: block;
     width: 100%;
@@ -705,17 +715,21 @@
       .interaction .form {
         width: 620px;
         text-align: center; }
+      .interaction .price span {
+        display: block;
+        font-size: 48px;
+        margin-bottom: 48px; }
       .interaction .button {
         width: 200px;
         margin: auto; } }
 
 .contacts {
-  background-image: url(../img/bg.jpeg);
   background-size: 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-image: url(../img/contacts.jpg); }
   .contacts .wrap {
-    width: 1320px;
+    width: 100%;
     max-width: 1320px;
     margin: auto; }
     @media (min-width: 1024px) {
