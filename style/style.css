@@ -8,8 +8,11 @@
   font-family: 'Noto Sans', sans-serif;
   text-align: center;
   font-size: 32px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   color: #000; }
+  @media (min-width: 1024px) {
+    .title {
+      margin-bottom: 48px; } }
 
 .second_line {
   margin-bottom: 0 !important; }
@@ -168,8 +171,20 @@
       margin-bottom: 24px;
       font-family: 'Noto Sans', sans-serif;
       color: rgba(0, 0, 0, 0.9); }
+  .warm .wrap {
+    padding-top: 24px;
+    padding-bottom: 24px; }
   .warm .button_wrap {
-    display: flex; }
+    display: flex;
+    justify-content: space-between; }
+    .warm .button_wrap .button {
+      margin: 0;
+      width: 150px; }
+  @media (max-width: 1023px) {
+    .warm .warm_foto {
+      margin-left: -24px;
+      margin-right: -24px;
+      margin-top: -48px; } }
   @media (min-width: 1024px) {
     .warm {
       display: flex;
@@ -196,14 +211,16 @@
       .warm .warm_text {
         width: 480px; } }
   @media (min-width: 1024px) {
+        .warm .warm_text .wrap {
+          padding-top: 0px;
+          padding-bottom: 0px; }
         .warm .warm_text span {
           font-size: 16px;
           line-height: 1.5;
           color: rgba(0, 0, 0, 0.7); }
         .warm .warm_text .button_wrap {
           margin-top: 50px;
-          width: 450px;
-          justify-content: space-between; }
+          width: 450px; }
           .warm .warm_text .button_wrap .button {
             margin: 0;
             width: 200px; } }
@@ -225,6 +242,9 @@
       .can .content {
         padding-left: 24px;
         padding-right: 24px; } }
+  .can .can-wrap {
+    margin-left: -24px;
+    margin-right: -24px; }
   .can .card {
     width: 240px;
     height: 350px;
@@ -294,7 +314,7 @@
       border-radius: 10px;
       background-color: grey; }
       .can .slick-dots li.slick-active {
-        background-color: blue; }
+        background-color: #ff5722; }
   .can .can-desctop {
     display: none; }
   @media (min-width: 1260px) {
@@ -361,7 +381,7 @@
       padding-left: 24px;
       padding-right: 24px; } }
   .list .item {
-    width: 345px;
+    width: 100%;
     height: 64px;
     overflow: hidden;
     border-bottom: 1px solid grey;
@@ -449,7 +469,7 @@
       background-color: #fff;
       color: #ff5722; }
   .metod .button {
-    width: 280px;
+    width: auto;
     margin: auto;
     margin-top: 24px; }
   .metod .wrap {
@@ -471,7 +491,14 @@
     background-color: #fff;
     border-radius: 3px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    margin: auto; }
+    margin: auto;
+    padding: 24px; }
+    .metod .content ul {
+      padding-left: 18px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .metod .content ul li {
+        padding-bottom: 8px; }
   @media (min-width: 1024px) {
     .metod {
       display: flex;
@@ -487,12 +514,8 @@
       .metod .content {
         width: 480px; } }
   @media (min-width: 1024px) {
-        .metod .content ul {
-          padding-left: 18px;
-          padding-top: 10px;
-          padding-bottom: 10px; }
-          .metod .content ul li {
-            padding-bottom: 8px; } }
+        .metod .content .button {
+          width: 280px; } }
 
 .afraid {
   width: 100%;
@@ -507,7 +530,7 @@
       padding-left: 24px;
       padding-right: 24px; } }
   .afraid .item {
-    width: 345px;
+    width: 100%;
     height: 75px;
     margin: auto;
     border-radius: 5px;
@@ -689,12 +712,22 @@
     font-family: 'Noto Sans', sans-serif;
     color: rgba(0, 0, 0, 0.9);
     display: none; }
+  .interaction .price .title {
+    font-size: 24px;
+    margin-bottom: 24px; }
+  .interaction .price span {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 32px;
+    text-align: center; }
+  .interaction .form .button {
+    width: auto; }
   .interaction .input {
     position: relative;
     z-index: 1;
     display: inline-block;
     margin: 1em;
-    max-width: 80%;
+    max-width: 100%;
     width: calc(100% - 2em);
     vertical-align: top; }
   .interaction .input__field {
@@ -801,7 +834,6 @@
         width: 480px; } }
   @media (min-width: 1024px) {
       .interaction .price span {
-        display: block;
         font-size: 48px;
         margin-bottom: 48px; }
       .interaction .button {
