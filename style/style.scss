@@ -6,16 +6,34 @@ $interval: $main-font*1.5;
 $double-interval: $interval*2;
 
 $col-2: 620px;
+$col-2-md: 600px;
+$col-2-sm: 480px;
 
+@mixin desctop {
+  width: $col-2;
+
+  @media (max-width: 1380px) {
+    width: $col-2-md;
+  }
+
+  @media (max-width: 1260px) {
+    width: $col-2-sm;
+  }
+}
 
 @mixin content {
   width: 100%;
   max-width: 1320px;
   margin: auto;
+  padding-left: 0;
+  padding-right: 0;
 
-  @media (min-width: 1024px) {
     padding-top: $double-interval;
     padding-bottom: $double-interval;
+
+  @media (max-width: 1380px) {
+    padding-left: $interval;
+    padding-right: $interval;
   }
 }
 
@@ -75,7 +93,7 @@ $col-2: 620px;
 }
 
 @mixin back-image{
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -117,14 +135,10 @@ $col-2: 620px;
     @include content;
   }
 
-  .title-block{
-    width: 50%;
-    float: right;
-  }
-
   .title{
     text-align: center;
-    font-size: 44px;
+    font-size: 32px;
+    margin-bottom: 32px;
     width: 100%;
     font-family: 'Noto Sans', sans-serif;
     color:#333;
@@ -134,8 +148,8 @@ $col-2: 620px;
 
   .subtitle{
     text-align: center;
-    font-size: 26px;
-    margin-bottom: 48px;
+    font-size: 18px;
+    margin-bottom: 32px;
     width: 100%;
     color:#000;
     text-shadow: 0px 1px 6px #fff;
@@ -146,8 +160,6 @@ $col-2: 620px;
     transition: 200ms;
     will-change: transform;
     height: 50px;
-    margin-left: 40px;
-    margin-right: 40px;
     will-change: transform;
     text-align: center;
   }
@@ -167,6 +179,28 @@ $col-2: 620px;
      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     transition: 200ms;
     width: 300px;
+  }
+
+  @media (min-width: 1024px) {
+    .title-block{
+      width: 50%;
+      float: right;
+    }
+
+    .title{
+      font-size: 44px;
+      margin-bottom: $double-interval;
+    }
+
+    .subtitle{
+      font-size: 26px;
+      margin-bottom: 48px;
+    }
+
+    .button-wrap{
+      margin-left: 40px;
+      margin-right: 40px;
+    }
   }
 }
 
@@ -231,14 +265,14 @@ $col-2: 620px;
     justify-content: space-between;
 
     .warm_foto{
-      width: $col-2;
+      @include desctop;
       
       .foto{
         height: auto;
       }
     }  
     .warm_text{
-      width: $col-2;
+      @include desctop;
       padding-left: $double-interval;
       padding-right: $double-interval;
 
@@ -372,7 +406,7 @@ $col-2: 620px;
     display: none;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1260px) {
     .can-desctop{
       display: flex;
       flex-wrap: wrap;
@@ -381,7 +415,7 @@ $col-2: 620px;
       .card{
         @include block;
 
-        width: $col-2;
+        @include desctop;
         height: auto;
         margin: 0;
         margin-bottom: 64px;
@@ -534,7 +568,7 @@ $col-2: 620px;
     justify-content: space-between;
 
     .content{
-      width: $col-2;
+      @include desctop;
       margin: 0;
       padding: 48px;
 
@@ -626,7 +660,7 @@ $col-2: 620px;
       justify-content: space-between;
 
       .item{
-        width: $col-2;
+        @include desctop;
         height: auto;
         box-shadow: none;
         margin: 0;
@@ -865,7 +899,7 @@ $col-2: 620px;
   
     .price,
     .form{
-      width: $col-2;
+      @include desctop;
       text-align: center;
     }
 
@@ -930,7 +964,7 @@ $col-2: 620px;
     justify-content: space-between;
 
     .content{
-      width: $col-2;
+      @include desctop;
       float: right;
 
       ul{

@@ -15,7 +15,7 @@
   margin-bottom: 0 !important; }
 
 .front {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(../img/front_my.jpg);
@@ -31,17 +31,19 @@
   .front .wrap {
     width: 100%;
     max-width: 1320px;
-    margin: auto; }
-    @media (min-width: 1024px) {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+    @media (max-width: 1380px) {
       .front .wrap {
-        padding-top: 48px;
-        padding-bottom: 48px; } }
-  .front .title-block {
-    width: 50%;
-    float: right; }
+        padding-left: 24px;
+        padding-right: 24px; } }
   .front .title {
     text-align: center;
-    font-size: 44px;
+    font-size: 32px;
+    margin-bottom: 32px;
     width: 100%;
     font-family: 'Noto Sans', sans-serif;
     color: #333;
@@ -49,8 +51,8 @@
     will-change: transform; }
   .front .subtitle {
     text-align: center;
-    font-size: 26px;
-    margin-bottom: 48px;
+    font-size: 18px;
+    margin-bottom: 32px;
     width: 100%;
     color: #000;
     text-shadow: 0px 1px 6px #fff;
@@ -59,8 +61,6 @@
     transition: 200ms;
     will-change: transform;
     height: 50px;
-    margin-left: 40px;
-    margin-right: 40px;
     will-change: transform;
     text-align: center; }
   .front .button {
@@ -78,11 +78,28 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     transition: 200ms;
     width: 300px; }
+  @media (min-width: 1024px) {
+    .front .title-block {
+      width: 50%;
+      float: right; }
+    .front .title {
+      font-size: 44px;
+      margin-bottom: 48px; }
+    .front .subtitle {
+      font-size: 26px;
+      margin-bottom: 48px; }
+    .front .button-wrap {
+      margin-left: 40px;
+      margin-right: 40px; } }
 
 .warm {
   width: 100%;
   max-width: 1320px;
   margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
   overflow: hidden;
   /*.warm .wrap#warm_foto{
   	transform: translateX(-100%);
@@ -100,10 +117,10 @@
     transform: none;
     transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }*/ }
-  @media (min-width: 1024px) {
+  @media (max-width: 1380px) {
     .warm {
-      padding-top: 48px;
-      padding-bottom: 48px; } }
+      padding-left: 24px;
+      padding-right: 24px; } }
   .warm .button {
     font-family: 'Noto Sans', sans-serif;
     display: block;
@@ -158,13 +175,27 @@
       display: flex;
       justify-content: space-between; }
       .warm .warm_foto {
-        width: 620px; }
+        width: 620px; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .warm .warm_foto {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .warm .warm_foto {
+        width: 480px; } }
+  @media (min-width: 1024px) {
         .warm .warm_foto .foto {
           height: auto; }
       .warm .warm_text {
         width: 620px;
         padding-left: 48px;
-        padding-right: 48px; }
+        padding-right: 48px; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .warm .warm_text {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .warm .warm_text {
+        width: 480px; } }
+  @media (min-width: 1024px) {
         .warm .warm_text span {
           font-size: 16px;
           line-height: 1.5;
@@ -178,18 +209,22 @@
             width: 200px; } }
 
 .can {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(../img/bad.jpg); }
   .can .content {
     width: 100%;
     max-width: 1320px;
-    margin: auto; }
-    @media (min-width: 1024px) {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+    @media (max-width: 1380px) {
       .can .content {
-        padding-top: 48px;
-        padding-bottom: 48px; } }
+        padding-left: 24px;
+        padding-right: 24px; } }
   .can .card {
     width: 240px;
     height: 350px;
@@ -262,7 +297,7 @@
         background-color: blue; }
   .can .can-desctop {
     display: none; }
-  @media (min-width: 1024px) {
+  @media (min-width: 1260px) {
     .can .can-desctop {
       display: flex;
       flex-wrap: wrap;
@@ -275,7 +310,14 @@
         height: auto;
         margin: 0;
         margin-bottom: 64px;
-        display: flex; }
+        display: flex; } }
+    @media (min-width: 1260px) and (max-width: 1380px) {
+      .can .can-desctop .card {
+        width: 600px; } }
+    @media (min-width: 1260px) and (max-width: 1260px) {
+      .can .can-desctop .card {
+        width: 480px; } }
+  @media (min-width: 1260px) {
         .can .can-desctop .card .img {
           width: 200px;
           height: 300px; }
@@ -309,11 +351,15 @@
 .list {
   width: 100%;
   max-width: 1320px;
-  margin: auto; }
-  @media (min-width: 1024px) {
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 48px;
+  padding-bottom: 48px; }
+  @media (max-width: 1380px) {
     .list {
-      padding-top: 48px;
-      padding-bottom: 48px; } }
+      padding-left: 24px;
+      padding-right: 24px; } }
   .list .item {
     width: 345px;
     height: 64px;
@@ -371,7 +417,7 @@
         opacity: 1; } }
 
 .metod {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(../img/metod.jpg); }
@@ -409,11 +455,15 @@
   .metod .wrap {
     width: 100%;
     max-width: 1320px;
-    margin: auto; }
-    @media (min-width: 1024px) {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+    @media (max-width: 1380px) {
       .metod .wrap {
-        padding-top: 48px;
-        padding-bottom: 48px; } }
+        padding-left: 24px;
+        padding-right: 24px; } }
   .metod .content {
     font-size: 16px;
     line-height: 1.5;
@@ -429,7 +479,14 @@
       .metod .content {
         width: 620px;
         margin: 0;
-        padding: 48px; }
+        padding: 48px; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .metod .content {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .metod .content {
+        width: 480px; } }
+  @media (min-width: 1024px) {
         .metod .content ul {
           padding-left: 18px;
           padding-top: 10px;
@@ -440,11 +497,15 @@
 .afraid {
   width: 100%;
   max-width: 1320px;
-  margin: auto; }
-  @media (min-width: 1024px) {
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 48px;
+  padding-bottom: 48px; }
+  @media (max-width: 1380px) {
     .afraid {
-      padding-top: 48px;
-      padding-bottom: 48px; } }
+      padding-left: 24px;
+      padding-right: 24px; } }
   .afraid .item {
     width: 345px;
     height: 75px;
@@ -499,7 +560,14 @@
         height: auto;
         box-shadow: none;
         margin: 0;
-        margin-bottom: 96px; }
+        margin-bottom: 96px; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .afraid .afraid_wrap .item {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .afraid .afraid_wrap .item {
+        width: 480px; } }
+  @media (min-width: 1024px) {
         .afraid .afraid_wrap .item .preview {
           height: auto; }
         .afraid .afraid_wrap .item img {
@@ -522,18 +590,22 @@
           text-align: center; } }
 
 .how {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(../img/how.jpg); }
   .how .content {
     width: 100%;
     max-width: 1320px;
-    margin: auto; }
-    @media (min-width: 1024px) {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+    @media (max-width: 1380px) {
       .how .content {
-        padding-top: 48px;
-        padding-bottom: 48px; } }
+        padding-left: 24px;
+        padding-right: 24px; } }
   .how .title {
     color: #fff;
     text-shadow: 0px 1px 6px #000; }
@@ -571,11 +643,15 @@
 .interaction {
   width: 100%;
   max-width: 1320px;
-  margin: auto; }
-  @media (min-width: 1024px) {
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 48px;
+  padding-bottom: 48px; }
+  @media (max-width: 1380px) {
     .interaction {
-      padding-top: 48px;
-      padding-bottom: 48px; } }
+      padding-left: 24px;
+      padding-right: 24px; } }
   .interaction .button {
     font-family: 'Noto Sans', sans-serif;
     display: block;
@@ -714,7 +790,16 @@
       .interaction .price,
       .interaction .form {
         width: 620px;
-        text-align: center; }
+        text-align: center; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .interaction .price,
+      .interaction .form {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .interaction .price,
+      .interaction .form {
+        width: 480px; } }
+  @media (min-width: 1024px) {
       .interaction .price span {
         display: block;
         font-size: 48px;
@@ -724,18 +809,22 @@
         margin: auto; } }
 
 .contacts {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(../img/contacts.jpg); }
   .contacts .wrap {
     width: 100%;
     max-width: 1320px;
-    margin: auto; }
-    @media (min-width: 1024px) {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+    @media (max-width: 1380px) {
       .contacts .wrap {
-        padding-top: 48px;
-        padding-bottom: 48px; } }
+        padding-left: 24px;
+        padding-right: 24px; } }
   .contacts .content {
     background-color: #fff;
     border-radius: 3px;
@@ -766,7 +855,14 @@
       justify-content: space-between; }
       .contacts .content {
         width: 620px;
-        float: right; }
+        float: right; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .contacts .content {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .contacts .content {
+        width: 480px; } }
+  @media (min-width: 1024px) {
         .contacts .content ul {
           padding-top: 0; }
         .contacts .content li {
