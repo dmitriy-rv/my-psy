@@ -119,9 +119,12 @@ $orange: #ff5722;
   }
 }
 
-.second_line{
-  margin-bottom: 0 !important;
+@media (min-width: 1024px) {
+  .second_line{
+    margin-bottom: 0 !important;
+  } 
 }
+
 
 .front{
   @include back-image;
@@ -182,9 +185,10 @@ $orange: #ff5722;
     letter-spacing: 3px;
     background-color: $orange;
     color:#fff;
-     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     transition: 200ms;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
   }
 
   @media (min-width: 1024px) {
@@ -274,6 +278,10 @@ $orange: #ff5722;
     .button{
       margin: 0;
       width: 150px;
+
+      @media (max-width: 375px) {
+        width: 125px;
+      }
     }
   }
 
@@ -1033,7 +1041,7 @@ $orange: #ff5722;
   	background-color:white;
   	border-radius: 5px;
     /*box-shadow: 0px 2px 3px 1px #bf360ca1;*/
-    padding: 48px;
+    padding: 24px;
 
     ul{
     	padding-left: 0;
@@ -1067,6 +1075,7 @@ $orange: #ff5722;
     .content{
       @include desctop;
       float: right;
+      padding: 48px;
 
       ul{
         padding-top: 0;
