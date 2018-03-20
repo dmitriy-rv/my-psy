@@ -1,43 +1,46 @@
-$(document).on("click",".toJoin", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
-        event.preventDefault();
+var width = $('.afraid .item').width()/2 - 40;
 
-        //забираем идентификатор бока с атрибута href
-        var id  = $(this).attr('href'),
+$(document).on("click",".toJoin", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+
+    //забираем идентификатор бока с атрибута href
+    var id  = $(this).attr('href'),
  
-        //узнаем высоту от начала страницы до блока на который ссылается якорь
-        top = $(id).offset().top;
+    //узнаем высоту от начала страницы до блока на который ссылается якорь
+    top = $(id).offset().top;
          
-        //анимируем переход на расстояние - top за 1500 мс
-        $('body,html').animate({scrollTop: top}, 2000);
-    });
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({scrollTop: top}, 2000);
+});
 
 
 $('.more').click(function(event){
-			$(event.target.offsetParent).addClass('show_more');
-		});
+	$(event.target.offsetParent).addClass('show_more');
+});
 
-		$('.close').click(function(event){
-			$(event.target.parentElement.offsetParent).removeClass('show_more');
-		});
+$('.close').click(function(event){
+	$(event.target.parentElement.offsetParent).removeClass('show_more');
+});
 
-		$('.afraid .item .preview').click(function(event){
-			if (event.target.classList[0] == 'preview'){
-				$(event.target.parentElement).toggleClass('show_more');
-			} else{
-				$(event.target.parentElement.parentElement).toggleClass('show_more');
-			}
-			
-		});
+$('.afraid .item .preview').click(function(event){
+	if (event.target.classList[0] == 'preview'){
+		$(event.target.parentElement).toggleClass('show_more');
+	} else{
+		$(event.target.parentElement.parentElement).toggleClass('show_more');
+	}	
+	$('.afraid .img').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+	$('.afraid .item.show_more .img').css('transform', 'matrix(1.2, 0, 0, 1.2, '+ width +', 0)');
+});
 
-		$('.list .item').click(function(event){
+$('.list .item').click(function(event){
 
-			if (event.target.classList[0] == 'item'){
-				$(event.target).toggleClass('show_more');
-			} else{
-				$(event.target.parentElement).toggleClass('show_more');
-			}
-		});
+	if (event.target.classList[0] == 'item'){
+		$(event.target).toggleClass('show_more');
+	} else{
+		$(event.target.parentElement).toggleClass('show_more');
+	}
+});
 
 		$('.can-wrap').slick({
 			centerMode: true,
