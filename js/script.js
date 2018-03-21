@@ -30,7 +30,7 @@ $('.afraid .item .preview').click(function(event){
 		$(event.target.parentElement.parentElement).toggleClass('show_more');
 	}	
 	$('.afraid .img').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-	$('.afraid .item.show_more .img').css('transform', 'matrix(1.2, 0, 0, 1.2, '+ width +', 0)');
+	$('.afraid .item.show_more .img').css('transform', 'matrix(1.5, 0, 0, 1.5, '+ width +', 0)');
 });
 
 $('.list .item').click(function(event){

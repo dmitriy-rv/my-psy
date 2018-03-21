@@ -575,7 +575,7 @@
     max-height: 75px;
     margin: auto;
     border-radius: 3px;
-    transition: 0.4s;
+    transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 300ms;
     margin-bottom: 30px;
     overflow: hidden; }
     @media (max-width: 1023px) {
@@ -587,19 +587,20 @@
       display: flex;
       position: relative;
       align-items: center;
-      padding: 12px; }
+      padding: 12px;
+      transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 300ms; }
     .afraid .item .title_hide {
       padding-left: 15px;
       padding-right: 10px;
       font-size: 18px;
       opacity: 1;
-      transition: 0.2s;
+      transition: 300ms cubic-bezier(0.645, 0.045, 0.355, 1) 800ms;
       flex-grow: 1;
       flex-shrink: 1; }
     .afraid .item .img {
       width: 50px;
       height: 50px;
-      transition: 0.2s;
+      transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 300ms;
       transform-origin: 50% 50%; }
     .afraid .item .more {
       flex-grow: 0;
@@ -607,14 +608,16 @@
       width: 15px;
       height: 15px;
       background-image: url("../img/add.svg");
-      transition: 0.2s; }
+      transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 450ms; }
+    .afraid .item .more_wrap {
+      transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1); }
     .afraid .item .text_show {
       font-size: 16px;
       line-height: 1.5;
       color: rgba(0, 0, 0, 0.7);
       padding: 24px;
       opacity: 0;
-      transition: 0.2s; }
+      transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1); }
       .afraid .item .text_show .title_show {
         font-size: 24px;
         line-height: 1.5;
@@ -625,15 +628,26 @@
         text-align: center; }
     .afraid .item.show_more {
       max-height: 500px;
-      align-items: normal; }
+      align-items: normal;
+      transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1); }
+      .afraid .item.show_more .preview {
+        height: 100px;
+        transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1); }
       .afraid .item.show_more .img {
-        transform: translateX(0px) scale(1.2); }
+        transform: translateX(0px) scale(1.2);
+        transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1); }
       .afraid .item.show_more .title_hide {
-        opacity: 0; }
+        opacity: 0;
+        transition: 0ms 0ms; }
       .afraid .item.show_more .text_show {
-        opacity: 1; }
+        opacity: 1;
+        transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 300ms; }
       .afraid .item.show_more .more {
-        transform: translateY(-15px) rotate(-45deg); }
+        transform: rotate(-45deg);
+        transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 450ms; }
+      .afraid .item.show_more .more_wrap {
+        transform: translateY(-30px);
+        transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1); }
   @media (min-width: 1024px) {
     .afraid .afraid_wrap {
       display: -webkit-flex;

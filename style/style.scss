@@ -688,7 +688,7 @@ $orange: #ff5722;
   	max-height: 75px;	
   	margin: auto;
   	border-radius: 3px;
-  	transition: 0.4s;
+  	transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 300ms;
   	margin-bottom: 30px;
   	overflow: hidden;
   
@@ -700,6 +700,7 @@ $orange: #ff5722;
     	position: relative;	
     	align-items: center;
     	padding: 12px;
+      transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 300ms;
     }
 
     .title_hide{
@@ -707,7 +708,7 @@ $orange: #ff5722;
       padding-right: 10px;
     	font-size: 18px; 
     	opacity: 1;
-    	transition: 0.2s;
+    	transition: 300ms cubic-bezier(0.645, 0.045, 0.355, 1) 800ms;
       flex-grow: 1; 
       flex-shrink: 1;
     }
@@ -715,7 +716,7 @@ $orange: #ff5722;
     .img{
     	width: 50px;
     	height: 50px;
-    	transition: 0.2s;
+    	transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 300ms;
       transform-origin: 50% 50%;
     }
 
@@ -725,7 +726,11 @@ $orange: #ff5722;
       width: 15px;
       height: 15px;
       background-image: url('../img/add.svg');
-      transition:0.2s;
+      transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 450ms;
+    }
+
+    .more_wrap{
+      transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
     .text_show{
@@ -733,7 +738,7 @@ $orange: #ff5722;
 
       padding: 24px;
       opacity: 0;
-      transition: 0.2s;
+      transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
       .title_show{
         @include subtitle;
@@ -745,21 +750,35 @@ $orange: #ff5722;
     &.show_more{
     	max-height: 500px;
     	align-items: normal;
+      transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      .preview{
+        height: 100px;
+        transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
 
       .img{
         transform: translateX(0px) scale(1.2);
+        transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
       }
 
       .title_hide{
         opacity: 0;
+        transition: 0ms 0ms;
       }
 
       .text_show{
         opacity: 1;
+        transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 300ms;
       }
 
       .more{
-        transform: translateY(-15px) rotate(-45deg);
+        transform:rotate(-45deg);
+        transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 450ms;
+      }
+      .more_wrap{
+        transform: translateY(-30px);
+        transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1);
       }
     }
   }
