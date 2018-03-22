@@ -135,7 +135,7 @@ $orange: #ff5722;
 
 .front{
   @include back-image;
-  background-image: url(../img/front_my.jpg);
+  background-image: url(../img/bg_1_mob.jpg);
 
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -208,6 +208,7 @@ $orange: #ff5722;
   }
 
   @media (min-width: 1024px) {
+    background-image: url(../img/front_my.jpg);
     .title-block{
       width: 50%;
       float: right;
@@ -349,7 +350,7 @@ $orange: #ff5722;
 
 .can{
   @include back-image;
-  background-image: url(../img/bad.jpg);
+  background-image: url(../img/bg_3_mob.jpg);
 
   .content{
     @include content;
@@ -490,6 +491,8 @@ $orange: #ff5722;
   }
 
   @media (min-width: 1260px) {
+    background-image: url(../img/bad.jpg);
+
     .can-desctop{
       display: flex;
       flex-wrap: wrap;
@@ -506,7 +509,7 @@ $orange: #ff5722;
 
         .img{
           width: 200px;
-          height: 300px;
+          height: 100%;
 
           img{
             width: 100%;
@@ -630,7 +633,7 @@ $orange: #ff5722;
 .metod{
   @include back-image;
   @include button;
-  background-image: url(../img/metod.jpg);
+  background-image: url(../img/bg_5_mob.jpg);
 
   .button{
     width: auto;
@@ -662,6 +665,7 @@ $orange: #ff5722;
   }
 
   @media (min-width: 1024px) {
+    background-image: url(../img/metod.jpg);
     display: flex;
     justify-content: space-between;
 
@@ -835,7 +839,7 @@ $orange: #ff5722;
 
 .how{
   @include back-image;
-  background-image: url(../img/how.jpg);
+  background-image: url(../img/bg_7_mob.jpg);
   
   .content{
     @include content;
@@ -875,6 +879,8 @@ $orange: #ff5722;
   }
 
   @media (min-width: 1024px) {
+    background-image: url(../img/how.jpg);
+
     .item_block{
       display: -webkit-flex;
       display: -moz-flex;
@@ -1072,7 +1078,7 @@ $orange: #ff5722;
 
 .contacts{
   @include back-image;
-  background-image: url(../img/contacts.jpg);
+  background-image: url(../img/bg_9_mob.jpg);
   
   .wrap{
     @include content;
@@ -1113,6 +1119,7 @@ $orange: #ff5722;
   }
 
   @media (min-width: 1024px) {
+    background-image: url(../img/contacts.jpg);
     display: flex;
     justify-content: space-between;
 
