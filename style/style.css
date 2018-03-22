@@ -161,7 +161,6 @@
       color: #ff5722; }
   .warm .foto {
     width: 100%;
-    height: 300px;
     /*transform: scale(0.8);*/ }
   .warm .wrap.show .foto {
     -webkit-transform: none;
