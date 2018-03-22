@@ -14,7 +14,6 @@ $(document).on("click",".toJoin", function (event) {
     $('body,html').animate({scrollTop: top}, 2000);
 });
 
-
 $('.more').click(function(event){
 	$(event.target.offsetParent).addClass('show_more');
 });
@@ -27,7 +26,8 @@ $('.afraid .item .preview').click(function(event){
 	if (event.target.classList[0] == 'preview'){
 		$(event.target.parentElement).toggleClass('show_more');
 	} else{
-		$(event.target.parentElement.parentElement).toggleClass('show_more');
+		console.log(event);
+		$(event.currentTarget.parentElement).toggleClass('show_more');
 	}	
 	$('.afraid .img').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
 	$('.afraid .item.show_more .img').css('transform', 'matrix(1.5, 0, 0, 1.5, '+ width +', 0)');
@@ -96,7 +96,7 @@ $('#send-sing_up').click(function(){
 
 	$.ajax({
       type: "GET", //Метод отправки
-      url: "/send-sing_up.php", //путь до php фаила отправителя
+      url: "/send.php", //путь до php фаила отправителя
       data: {
       	name:$('#name-sing_up').val(),
       	phone:$('#phone-sing_up').val()
