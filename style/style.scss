@@ -153,8 +153,8 @@ $orange: #ff5722;
 
   .title{
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 32px;
+    font-size: 28px;
+    margin-bottom: 48px;
     width: 100%;
     font-family: 'Noto Sans', sans-serif;
     color:#333;
@@ -183,12 +183,12 @@ $orange: #ff5722;
   .button{
     @include shadow-2;
 
-    display: inline-block;
+    display: block;
     text-decoration: none;
     border: 1px solid $orange;
     border-radius: 3px;
     text-align: center;
-    line-height: 50px;
+    line-height: 25px;
     text-transform: uppercase;
     cursor: pointer;  
     letter-spacing: 3px;
@@ -196,9 +196,13 @@ $orange: #ff5722;
     color:#fff;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     transition: 200ms;
-    max-width: 300px;
+    max-width: 240px;
     width: 100%;
     transition: 0.2s;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: auto;
+    margin-bottom: 32px;
 
     &:hover,
     &:active{
@@ -350,7 +354,15 @@ $orange: #ff5722;
 
 .can{
   @include back-image;
+  @include button;
   background-image: url(../img/bg_3_mob.jpg);
+
+  .button{
+    width: auto;
+    margin: auto;
+    margin-top: 24px;
+  }
+
 
   .content{
     @include content;
