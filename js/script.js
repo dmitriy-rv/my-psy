@@ -14,6 +14,20 @@ $(document).on("click",".toJoin", function (event) {
     $('body,html').animate({scrollTop: top}, 2000);
 });
 
+$(document).on("click",".toMore", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+
+    //забираем идентификатор бока с атрибута href
+    var id  = $(this).attr('href'),
+ 
+    //узнаем высоту от начала страницы до блока на который ссылается якорь
+    top = $(id).offset().top;
+         
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({scrollTop: top}, 500);
+});
+
 $('.more').click(function(event){
 	$(event.target.offsetParent).addClass('show_more');
 });
@@ -111,4 +125,25 @@ $('#send-sing_up').click(function(){
         console.log("Ваше сообщение отпрвлено!");
       }
     });
+});
+
+$(window).scroll(function() {
+	if ($('#list-3_1').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#list-3_1').addClass('show');
+	}
+	if ($('#list-3_2').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#list-3_2').addClass('show');
+	}
+	if ($('#list-3_3').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#list-3_3').addClass('show');
+	}
+	if ($('#list-3_4').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#list-3_4').addClass('show');
+	}
+	if ($('#list-3_5').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#list-3_5').addClass('show');
+	}
+	if ($('#list-3_6').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#list-3_6').addClass('show');
+	}
 });
