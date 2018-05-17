@@ -1050,6 +1050,12 @@ $orange: #ff5722;
     }
   }
 
+  .phone-error{
+    color:red;
+    text-align: center;
+    display: none;
+  }
+
   .input {
     position: relative;
     z-index: 1;

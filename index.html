@@ -702,7 +702,7 @@
 						</svg>
 					</span>
 					<span class="input input--nao">
-						<input class="input__field input__field--nao" type="phone" id="phone-sing_up" required/>
+						<input class="input__field input__field--nao" type="tel" id="phone-sing_up" required/>
 						<label class="input__label input__label--nao" for="phone-sing_up">
 							<span class="input__label-content input__label-content--nao">Ваш телефон для связи*</span>
 						</label>
@@ -711,12 +711,18 @@
 						</svg>
 					</span>
 				</div>
+				<div class="phone-error" id="phone-error-1">
+					Введите номер телефона
+				</div>
+				<div class="phone-error" id="phone-error-2">
+					Введите полный номер телефона
+				</div>
 				<div class="button" id="send-sing_up">
 					Записаться
 				</div>
 			</div>
 			<div class="wrap_form_sucsess">
-				Спасибо! Ваша заявка принята. Я перезвоню вам в ближайшее время. С 10.00 до 20.00, если позже - на следующий день
+				Спасибо! Ваша заявка принята. Я перезвоню вам в ближайшее время. С 10.00 до 22.00 по МСК, если позже - на следующий день
 			</div>
 		</div>
 	</div>
@@ -760,6 +766,7 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+	<script src="js/inputmask.js"></script>
 
 	<script src="js/classie.js"></script>
 	<script src="js/script.js"></script>

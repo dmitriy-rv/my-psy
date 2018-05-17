@@ -47,6 +47,8 @@ $('.afraid .item .preview').click(function(event){
 	$('.afraid .item.show_more .img').css('transform', 'matrix(1.5, 0, 0, 1.5, '+ width +', 0)');
 });
 
+$('#phone-sing_up').inputmask({"mask": "+7 (999) 999-99-99"});
+
 $('.list .item').click(function(event){
 
 	if (event.target.classList[0] == 'item'){
@@ -105,26 +107,42 @@ $('.list .item').click(function(event){
 		})();
 
 $('#send-sing_up').click(function(){
+	var phone = $('#phone-sing_up').val().replace(/ /g, "").replace(/-/g, "").replace("(", "").replace(")", "").replace(/_/g, "");
+
+		console.log(phone);
+		console.log(phone.length);
+
+	if (phone.length == 12){
+
 	$('.wrap_form_sucsess').show();
 	$('.wrap_form_input').hide();
+	
 
-	$.ajax({
-      type: "GET", //Метод отправки
-      url: "/send.php", //путь до php фаила отправителя
-      data: {
-      	name:$('#name-sing_up').val(),
-      	phone:$('#phone-sing_up').val()
-      },
-      success: function() {
-        //код в этом блоке выполняется при успешной отправке сообщения
 
-		$('.wrap_form_sucsess').show();
-		$('.wrap_form_input').hide();
+		$.ajax({
+	      type: "GET", //Метод отправки
+	      url: "/send.php", //путь до php фаила отправителя
+	      data: {
+	      	name:$('#name-sing_up').val(),
+	      	phone:$('#phone-sing_up').val()
+	      },
+	      success: function() {
+	        //код в этом блоке выполняется при успешной отправке сообщения
 
-		$('.change').html($('#select-profession').val());
-        console.log("Ваше сообщение отпрвлено!");
-      }
-    });
+			$('.wrap_form_sucsess').show();
+			$('.wrap_form_input').hide();
+
+			$('.change').html($('#select-profession').val());
+	        console.log("Ваше сообщение отпрвлено!");
+	      }
+	    });
+	}else if (phone.length == 0){
+		$('#phone-error-1').show();
+		$('#phone-error-2').hide();
+	}else{
+		$('#phone-error-2').show();
+		$('#phone-error-1').hide();
+	}
 });
 
 $(window).scroll(function() {
