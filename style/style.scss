@@ -137,64 +137,65 @@ $orange: #ff5722;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../img/me_1.jpg);
+  background-attachment: fixed;
 
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
 	position: relative;
 
-.main_logo{
-  position: absolute;
-  z-index: 10;
-  top: 20px;
-  left: 20px;
-  height: 75px;
-  will-change:opacity;
-}
-
-.main_logo.showFront{
-  -webkit-transform: none;
-    transform: none;
-    opacity: 1;
-    transition: opacity 1000ms linear 1750ms;
-}
-.main_logo .logo{
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  width: 300px;
-}
-
-.main_logo img{
-  background: url('../favi.png') 0 0 no-repeat;
-  -webkit-background-size: 100%;
-  background-size: 100%;
-  width: 75px;
+  .main_logo{
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 20px;
     height: 75px;
-    margin-right: 15px;
-}
-.main_logo .name{
-  color:#fff;
-  text-shadow: 0px 1px 10px #000;
-    font-size: 27px;
-    height: 75px;
-    padding-bottom: 2px;
+    will-change:opacity;
+  }
+
+  .main_logo.showFront{
+    -webkit-transform: none;
+      transform: none;
+      opacity: 1;
+      transition: opacity 1000ms linear 1750ms;
+  }
+  .main_logo .logo{
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.main_logo .subname{
-  color:#fff;
-  text-shadow: 0px 1px 10px #000;
-  font-size: 18px;
-  font-style: italic;
-}
+    width: 300px;
+  }
+
+  .main_logo img{
+    background: url('../favi.png') 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    width: 75px;
+      height: 75px;
+      margin-right: 15px;
+  }
+  .main_logo .name{
+    color:#fff;
+    text-shadow: 0px 1px 10px #000;
+      font-size: 27px;
+      height: 75px;
+      padding-bottom: 2px;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .main_logo .subname{
+    color:#fff;
+    text-shadow: 0px 1px 10px #000;
+    font-size: 18px;
+    font-style: italic;
+  }
 
   .main_text{
     position: absolute;
@@ -271,7 +272,20 @@ $orange: #ff5722;
   }
 
   @media (min-width: 1024px) {
-    background-image: url(../img/front_my.jpg);
+    background-image: url(../img/test_1.jpg);
+
+    .main_logo{ 
+      .logo{
+        width: auto;
+
+        .name{
+          font-size: 36px;
+        }
+        .subname{
+          font-size: 24px;
+        }
+      }
+    }
     .title-block{
       width: 50%;
       float: right;
@@ -279,17 +293,26 @@ $orange: #ff5722;
 
     .title{
       font-size: 44px;
-      margin-bottom: $double-interval;
+      margin-bottom: $interval;
+      padding-right: 48px;
     }
 
     .subtitle{
       font-size: 26px;
       margin-bottom: 48px;
+      padding-right: 48px;
     }
 
     .button-wrap{
       margin-left: 40px;
-      margin-right: 40px;
+      margin-right: 48px;
+      width: auto;
+      margin-bottom: 64px;
+      padding-right: 0;
+
+      .button{
+        width: 350px;
+      }
     }
   }
 }
@@ -390,6 +413,7 @@ $orange: #ff5722;
       @include desctop;
       padding-left: $double-interval;
       padding-right: $double-interval;
+      margin: auto;
 
       .wrap{
         padding-top: 0px;
@@ -402,12 +426,11 @@ $orange: #ff5722;
 
       .button_wrap{
         margin-top: 50px;
-        width: 450px;
-        
 
         .button{
           margin: 0;
-          width: 200px;
+          width: 300px;
+          margin: auto;
         }
       }
     }
@@ -418,11 +441,16 @@ $orange: #ff5722;
   @include back-image;
   @include button;
   background-image: url(../img/bg_3_mob.jpg);
+  background-attachment: fixed;
 
   .button{
     width: auto;
     margin: auto;
     margin-top: 24px;
+
+    @media (min-width: 1024px) {
+      width: 350px;
+    }
   }
 
 
@@ -445,37 +473,37 @@ $orange: #ff5722;
     overflow: hidden;
     display: flex;
     transform: scale(0.8);
-}
+  }
 
- .wrap.show .item{
-  -webkit-transform: none;
-  transform: none;
-  transition: transform 600ms linear 300ms;
-}
+  .wrap.show .item{
+    -webkit-transform: none;
+    transform: none;
+    transition: transform 600ms linear 300ms;
+  }
 
  .wrap{
-  transform: translateX(-110%);
-  will-change: transform;
-}
+    transform: translateX(-110%);
+    will-change: transform;
+  }
 
  .wrap.show {
-  -webkit-transform: none;
-  transform: none;
-  transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-}
+    -webkit-transform: none;
+    transform: none;
+    transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 
  .item img{
-  width: 120px;
-  height: 120px;
-}
+    width: 120px;
+    height: 120px;
+  }
  .item .text{
     padding: 10px;
     font-size: 18px;
     vertical-align: middle;
     display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .card{
     @include block;
@@ -608,6 +636,10 @@ $orange: #ff5722;
 
   @media (min-width: 1260px) {
     background-image: url(../img/bad.jpg);
+
+    .can-mobile{
+      display: none;
+    }
 
     .can-desctop{
       display: flex;
@@ -750,6 +782,7 @@ $orange: #ff5722;
   @include back-image;
   @include button;
   background-image: url(../img/bg_1_mob.jpg);
+  background-attachment: fixed;
 
   .button{
     width: auto;
@@ -956,6 +989,7 @@ $orange: #ff5722;
 .how{
   @include back-image;
   background-image: url(../img/bg_7_mob.jpg);
+  background-attachment: fixed;
   
   .content{
     @include content;
@@ -1022,8 +1056,12 @@ $orange: #ff5722;
   @include button;
 
   .input-wrap{
-    margin-top: -32px;
     margin-bottom: $double-interval;
+
+    .title{
+      font-size: 24px;
+      margin-bottom: 0;
+    }
   }
 
   .wrap_form_sucsess{
@@ -1201,7 +1239,7 @@ $orange: #ff5722;
 .contacts{
   @include back-image;
   background-image: url(../img/bg_9_mob.jpg);
-  
+  background-attachment: fixed;
   .wrap{
     @include content;
   }

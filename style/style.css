@@ -21,6 +21,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../img/me_1.jpg);
+  background-attachment: fixed;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -131,19 +132,32 @@
       color: #ff5722; }
   @media (min-width: 1024px) {
     .front {
-      background-image: url(../img/front_my.jpg); }
+      background-image: url(../img/test_1.jpg); }
+      .front .main_logo .logo {
+        width: auto; }
+        .front .main_logo .logo .name {
+          font-size: 36px; }
+        .front .main_logo .logo .subname {
+          font-size: 24px; }
       .front .title-block {
         width: 50%;
         float: right; }
       .front .title {
         font-size: 44px;
-        margin-bottom: 48px; }
+        margin-bottom: 24px;
+        padding-right: 48px; }
       .front .subtitle {
         font-size: 26px;
-        margin-bottom: 48px; }
+        margin-bottom: 48px;
+        padding-right: 48px; }
       .front .button-wrap {
         margin-left: 40px;
-        margin-right: 40px; } }
+        margin-right: 48px;
+        width: auto;
+        margin-bottom: 64px;
+        padding-right: 0; }
+        .front .button-wrap .button {
+          width: 350px; } }
 
 .warm {
   width: 100%;
@@ -258,7 +272,8 @@
       .warm .warm_text {
         width: 620px;
         padding-left: 48px;
-        padding-right: 48px; } }
+        padding-right: 48px;
+        margin: auto; } }
     @media (min-width: 1024px) and (max-width: 1380px) {
       .warm .warm_text {
         width: 600px; } }
@@ -274,16 +289,17 @@
           line-height: 1.5;
           color: rgba(0, 0, 0, 0.7); }
         .warm .warm_text .button_wrap {
-          margin-top: 50px;
-          width: 450px; }
+          margin-top: 50px; }
           .warm .warm_text .button_wrap .button {
             margin: 0;
-            width: 200px; } }
+            width: 300px;
+            margin: auto; } }
 
 .can {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/bg_3_mob.jpg); }
+  background-image: url(../img/bg_3_mob.jpg);
+  background-attachment: fixed; }
   .can .button {
     font-family: 'Noto Sans', sans-serif;
     display: block;
@@ -315,6 +331,9 @@
     width: auto;
     margin: auto;
     margin-top: 24px; }
+    @media (min-width: 1024px) {
+      .can .button {
+        width: 350px; } }
   .can .content {
     width: 100%;
     max-width: 1320px;
@@ -463,6 +482,8 @@
   @media (min-width: 1260px) {
     .can {
       background-image: url(../img/bad.jpg); }
+      .can .can-mobile {
+        display: none; }
       .can .can-desctop {
         display: flex;
         flex-wrap: wrap;
@@ -587,7 +608,8 @@
 .metod {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/bg_1_mob.jpg); }
+  background-image: url(../img/bg_1_mob.jpg);
+  background-attachment: fixed; }
   .metod .button {
     font-family: 'Noto Sans', sans-serif;
     display: block;
@@ -805,7 +827,8 @@
 .how {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/bg_7_mob.jpg); }
+  background-image: url(../img/bg_7_mob.jpg);
+  background-attachment: fixed; }
   .how .content {
     width: 100%;
     max-width: 1320px;
@@ -894,8 +917,10 @@
       background-color: #fff;
       color: #ff5722; }
   .interaction .input-wrap {
-    margin-top: -32px;
     margin-bottom: 48px; }
+    .interaction .input-wrap .title {
+      font-size: 24px;
+      margin-bottom: 0; }
   .interaction .wrap_form_sucsess {
     font-size: 24px;
     line-height: 1.5;
@@ -1038,7 +1063,8 @@
 .contacts {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/bg_9_mob.jpg); }
+  background-image: url(../img/bg_9_mob.jpg);
+  background-attachment: fixed; }
   .contacts .wrap {
     width: 100%;
     max-width: 1320px;
